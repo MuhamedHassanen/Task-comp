@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: sans-serif;
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
 nav {
     display: flex;
     flex-direction: row;
@@ -45,77 +49,346 @@ nav {
     display: flex;
     flex-direction: row;
 }
-.nav-link{
+
+.nav-link {
     margin-left: 20px;
     text-decoration: none;
     color: rgb(98, 98, 98);
+    font-weight: 100;
 }
-.active{
+
+.active {
     border-bottom: rgb(94, 16, 94) solid 2px;
 }
-header{
+
+header {
     background-image: url("/Assets/blue_bg.png");
     background-size: cover;
-    height: 700px;
+    height: 800px;
     background-position: bottom;
 
 }
-.hero{
+
+.hero {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
     color: rgb(86, 86, 86);
+    padding: 50px;
 }
 
-.left-hero h1{ 
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 45px;
+.left-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
 }
-.right-hero .bottom{
+
+.left-hero h1 {
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.purp {
+    color: rgb(144, 46, 144) !important;
+}
+
+.right-hero {
+    width: 45%;
+}
+
+.right-hero .bottom {
     position: relative;
     z-index: -2;
-    max-width: 600px;
-    left: 10%;
+    max-width: 590px;
+    left: 0%;
     bottom: 30%;
 }
-.right-hero .person{
+
+.right-hero .person {
     max-width: 250px;
     position: absolute;
     right: 18%;
-    top: 7%;
+    top: 10%;
     z-index: -1;
 }
-.bottom{
+
+.bottom {
     position: relative;
     width: 100%;
 }
-.clouds{
+
+.clouds {
     position: absolute;
     z-index: 1;
     width: 370px;
     top: 48%;
     right: 10%;
 }
-.waves{
+
+.waves {
     position: relative;
+    bottom: 100%;
     z-index: -10;
-    width: 70%;
-    top: 0%;
+    width: 100% !important;
+    top: 0% !important;
 }
+
 @media (max-width:850px) {
-    nav{
+    nav {
         padding: 0px;
     }
-    .left-side{
+
+    .left-side {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0%;
     }
-    .nav-link{
+
+    .nav-link {
         margin: 0;
         font-size: 12px;
         margin-left: 5px;
     }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-hero {
+        position: relative;
+    }
+
+    .right-hero .clouds {
+        margin-top: 50%;
+    }
+
+    .right-hero .person {
+        margin-bottom: 10%;
+    }
+
+    .left-hero {
+        text-align: center !important;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.sec {
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-size: cover;
+    background-position: center;
+    margin: 100px;
+    background-image: url("/Assets/second_section_.png");
+}
+
+.feather {
+    background-color: red;
+}
+
+.car {
+    position: relative;
+}
+
+.txt {
+    width: 29%;
+    text-align: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: flex-start;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.left-right {
+    position: relative;
+    align-items: center;
+}
+
+.why {
+    position: relative;
+    width: 500px !important;
+}
+
+.why-text {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.rightt {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.sec img {
+    max-width: 200px !important;
+}
+
+.last {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.subs img {
+    max-width: 200px;
+}
+
+.subs {
+    text-align: center;
+}
+
+.subs .center-sub {
+    max-width: 350px !important;
+}
+
+@media (max-width:850px) {
+    .sec {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sec img {
+        width: 100%;
+    }
+
+    .last {
+        flex-direction: column;
+    }
+
+    .sec .right {
+        margin: 0%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .left-right {
+        width: 100%;
+        margin-right: 20px;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        margin-right: 100px;
+    }
+
+    .why-text {
+        margin-left: 20px;
+    }
+
+    .right-hero {
+        width: 100%;
+    }
+
+    .clouds {
+        width: 200px;
+        bottom: 40%;
+    }
+
+    .person {
+        max-width: 200px !important;
+        bottom: 40%;
+    }
+}
+
+footer {
+    width: 100% !important;
+    height: 700px;
+    display: flex;
+
+    background-position: top;
+    align-items: center;
+    position: relative;
+    bottom: 0%;
+    background-image: url("/Assets/Group\ 1131.png");
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 50px;
+    bottom: 0%;
+}
+
+.apps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+}
+
+.play,
+.apple {
+    display: flex;
+    width: 50%;
+    padding: 5px 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    border: none;
+    font-size: 8px;
+}
+
+.footer-img {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    max-width: 50%;
+}
+
+.logo1 {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+.linkat a {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
 }
